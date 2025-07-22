@@ -3,9 +3,13 @@ tracking
 playwright (javaScript) : https://playwright.dev/docs/intro
 
   install:
+  
     - install node >> https://nodejs.org
+    
     - npm init -y
+    
     - npm install -D @playwright/test
+    
     - npx playwright install
     
   How to run:
@@ -17,6 +21,7 @@ playwright (javaScript) : https://playwright.dev/docs/intro
 Robot framework (Browser library) : https://robotframework.org/
 
   install:
+  
     - install node >> https://nodejs.org
     - install python >> https://www.python.org/downloads/
     - install browser lib
