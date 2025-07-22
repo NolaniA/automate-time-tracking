@@ -37,10 +37,12 @@ Skip login
   step1: manual login
   
   step2: save storagestate
+  
     - robot: Save Storage State
     - playwright: await context.storageState({ path: 'auth.json' });
     
   step3: 
+  
     - robot: New Context    storageState=${CURDIR}${/}auth.json  ...
     - playwright:const context = await browser.newContext({storageState: './auth.json'}  ...)
 
