@@ -44,7 +44,7 @@ Skip login
   step3: 
   
     - robot: New Context    storageState=${CURDIR}${/}auth.json  ...
-    - playwright:const context = await browser.newContext({storageState: './auth.json'}  ...)
+    - playwright:const context = await browser.newContext({storageState: './auth.json'  ...})
 
   step4: runnnnn!!
     
