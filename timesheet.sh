@@ -363,6 +363,26 @@ function createTaskFromSingleActivity(activity) {
 EOF
 echo "✅ สร้างไฟล์ $SCRIPT_FILE เรียบร้อย"
 
+echo "🛠️ กำลังปรับรูปแบบวันที่ใน airtable_submit.mjs..."
+
+# ตรวจสอบระบบปฏิบัติการ
+OS_TYPE=$(uname)
+
+# คำสั่ง sed ให้แก้ yyyy/M/dd → MM/dd/yyyy
+if [[ "$OS_TYPE" == "Darwin" ]]; then
+  # สำหรับ macOS
+  sed -i '' "s/format(currentDate, 'yyyy\/M\/dd')/format(currentDate, 'MM\/dd\/yyyy')/g" "$SCRIPT_FILE"
+elif [[ "$OS_TYPE" == "Linux" ]]; then
+  # สำหรับ Linux
+  sed -i "s/format(currentDate, 'yyyy\/M\/dd')/format(currentDate, 'MM\/dd\/yyyy')/g" "$SCRIPT_FILE"
+else
+  echo "❌ ไม่รองรับ OS นี้: $OS_TYPE"
+  exit 1
+fi
+
+echo "✅ แก้ไข format วันที่ใน airtable_submit.mjs สำเร็จแล้ว"
+
+
 # 7. รันสคริปต์
 echo "🚀 กำลังรันสคริปต์..."
 node "$SCRIPT_FILE"
