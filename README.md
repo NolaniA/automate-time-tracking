@@ -2,6 +2,8 @@ tracking
 
 fast run -> อ่านใน timesheet.sh
 
+----- developer disclaimer ------ read below, but not use
+
 playwright (javaScript) : https://playwright.dev/docs/intro
 
 install:
@@ -28,7 +30,6 @@ install:
       - pip install -U robotframework-browser
       - rfbrowser clean-node
       - rfbrowser init
-
 
 How to run:
 

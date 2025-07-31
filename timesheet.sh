@@ -2,13 +2,33 @@
 
 # ********❌  Note (อ่านก่อนเหยดแหม่) ❌ ******** #
 
+#  ✅  ต้องมี file ชื่อ config.csv
 #  ✅  ตรวจเช็ค  START_DAY , END_DAY ,START_MONTH ,START_YEAR, EMPLOYEE_NAME, PROJECT_NAME และ COMPANY 
-#   ที่ด้านล่างและแก้ไข ให้ตรงกับของตัวเอง ✅
+# แก้ไข value ใน config.csv ให้ตรงกับของตัวเอง ✅
 
-# 🚀  วิธี run (cd ไปที่ path ของไฟล์นี้ก่อน)
-# 1 . เปิด terminal แล้ว run : chmod +x timesheet.sh ตามด้วย ./timesheet.sh 
+# 🚀  วิธี run (cd ไปที่ path ของไฟล์นี้ก่อน --> cd /your-drive/automate-time-tracking/ )
+# 1.  เปิด terminal แล้ว run คำสั่ง chmod +x timesheet.sh กด Enter
+# 2.  run คำสั่ง ./timesheet.sh 
 # 2 . อ่าน terminal แล้วทำตาม
+
+# -------------------- ตัวอย่าง config.csv ------------------------- #
+
+#    key,value
+#    START_DAY,29
+#    END_DAY,31
+#    START_MONTH,7
+#    START_YEAR,2025
+#    EMPLOYEE_NAME,โด้-พัฒนพล
+#    PROJECT_NAME,futureskill-b2b-learning-platform25
+#    MORNING_WORK,Bug fix i18n content-panel repository
+#    DAILY_WORK,Development class management II
+
+
+# ---------------------------------------------- #
+
+
 # ********❌  Note (อ่านก่อนเหยดแหม่ ❌ ******** #
+
 
 # หา directory ที่ไฟล์นี้อยู่
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -58,45 +78,77 @@ else
   echo "✅ พบแพ็กเกจ date-fns แล้ว"
 fi
 
-# 6. สร้างไฟล์ airtable_submit.mjs ถ้ายังไม่มี
+CONFIG_FILE="config.csv"
 SCRIPT_FILE="airtable_submit.mjs"
+
+# 6. ตรวจสอบว่าไฟล์ config.csv มีอยู่ไหม
+if [[ ! -f $CONFIG_FILE ]]; then
+  echo "❌ Not found: $CONFIG_FILE"
+  exit 1
+fi
+
+echo "📄 Found config: $CONFIG_FILE"
+
+# 7. สร้าง airtable_submit.mjs โดยฝังโค้ด JavaScript ที่จะอ่าน config.csv ภายใน
 cat << 'EOF' > "$SCRIPT_FILE"
+import { readFileSync } from 'fs';
 import { chromium } from 'playwright';
 import { format, isWeekend } from 'date-fns';
 
-const START_DAY = 29;
-const END_DAY = 31;
-const START_MONTH = 7;
-const START_YEAR = 2025;
+const configText = readFileSync('./config.csv', 'utf-8');
+const configLines = configText.trim().split('\n').slice(1); // skip header
+const config = {};
+for (const line of configLines) {
+  const [key, ...rest] = line.split(',');
+  const value = rest.join(',').trim(); // รองรับ value ที่มี , ได้
+  if (key && value) config[key.trim()] = value;
+}
 
-const EMPLOYEE_NAME = "โด้-พัฒนพล";
-const PROJECT_NAME = "futureskill-b2b-learning-platform25";
+// ตรวจสอบ config ที่จำเป็น
+const REQUIRED_KEYS = ['START_DAY', 'END_DAY', 'START_MONTH', 'START_YEAR', 'EMPLOYEE_NAME', 'PROJECT_NAME'];
+for (const key of REQUIRED_KEYS) {
+  if (!config[key]) {
+    console.error(`❌ Missing or empty required config key: ${key}`);
+    process.exit(1);
+  }
+}
+
+// แปลงค่าตัวเลขจาก string
+const START_DAY = Number(config.START_DAY);
+const END_DAY = Number(config.END_DAY);
+const START_MONTH = Number(config.START_MONTH);
+const START_YEAR = Number(config.START_YEAR);
+
+const EMPLOYEE_NAME = config.EMPLOYEE_NAME;
+const PROJECT_NAME = config.PROJECT_NAME;
 const COMPANY = "FutureSkill";
 
-const URL = "https://airtable.com/app6PjJAAPwiRw71N/pagWjJnFT2ZQn7eka/form";
-
-// Activity types - ขยายจาก meeting ให้ครอบคลุมกิจกรรมทั้งหมด
 const ACTIVITY_TYPE = {
   WEEKLY: 'Weekly Update Tech Team',
-  DAILY_STANDUP: 'Daily Standup', 
   RETRO: 'Sprint Retrospective',
   PLANNING: 'Sprint Planning',
   REVIEW: 'Sprint Review',
   DEPLOY: 'Recheck feature before deploy to production',
-  LUNCH_BREAK: 'พักกลางวัน',
-  DEVELOPMENT: 'Development Work'
+  DAILY_STANDUP: 'Daily Standup', 
+  MORNING_WORK: config.MORNING_WORK || "ปรึกษากับ ux/ui ส่วนที่ต้องพัฒนาเพิ่มเติมของโปรเจค",
+  LUNCH_BREAK: "พักเที่ยง",
+  DAILY_WORK: config.DAILY_WORK || "อัพเดตความคืบหน้าของงานและระยะเวลาดำเนินงาน"
 };
 
-// Schedule สำหรับแต่ละกิจกรรม พร้อมจำนวนชั่วโมง
 const SCHEDULE = {
-  WEEKLY: { day: 2, frequency: 'every', hours: 1 },           // ทุกวันอังคาร (Tuesday = 2)
-  PLANNING: { day: 1, frequency: 'alternate', hours: 1 },     // จันทร์เว้นจันทร์ (Monday = 1)
-  DEPLOY: { day: 4, frequency: 'every', hours: 0.5 },         // ทุกวันพฤหัส (Thursday = 4)
-  RETRO: { day: 5, frequency: 'alternate', hours: 1 },        // ศุกร์เว้นศุกร์ (Friday = 5)
-  REVIEW: { day: 5, frequency: 'alternate', hours: 1 },       // ศุกร์เว้นศุกร์ (Friday = 5)
-  DAILY_STANDUP: { day: 'workdays', frequency: 'every', hours: 1 }, // ทุกวันทำงาน
-  LUNCH_BREAK: { day: 'workdays', frequency: 'every', hours: 1 }    // ทุกวันทำงาน
+  WEEKLY: { day: 2, frequency: 'every', hours: 1 },
+  PLANNING: { day: 1, frequency: 'alternate', hours: 1 },
+  DEPLOY: { day: 4, frequency: 'every', hours: 0.5 },
+  RETRO: { day: 5, frequency: 'alternate', hours: 1 },
+  REVIEW: { day: 5, frequency: 'alternate', hours: 1 },
+  DAILY_STANDUP: { day: 'workdays', frequency: 'every', hours: 1 },
+  MORNING_WORK: { day: 'workdays', frequency: 'every', hours: 1 },
+  LUNCH_BREAK: { day: 'workdays', frequency: 'every', hours: 1 },
+  DAILY_WORK: { day: 'workdays', frequency: 'every', hours: 1 }
 };
+
+const URL = "https://airtable.com/app6PjJAAPwiRw71N/pagWjJnFT2ZQn7eka/form";
+
 
 /**
  * เช็คว่าวันนั้นๆ ต้องมีกิจกรรมอะไรบ้าง
@@ -151,8 +203,11 @@ function createTaskFromSingleActivity(activity) {
     case 'LUNCH_BREAK':
       taskType = 'Idle';
       break;
-    case 'DEVELOPMENT':
-      taskType = 'Development';
+    case 'MORNING_WORK':
+      taskType = 'Create / Do / Work';
+      break;
+    case 'DAILY_WORK':
+      taskType = 'Create / Do / Work';
       break;
     default:
       taskType = 'Internal Meeting';
