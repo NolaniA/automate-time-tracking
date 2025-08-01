@@ -1,6 +1,6 @@
 tracking
 
-fast run -> อ่านใน timesheet.sh
+fast run -> อ่านใน README(for playwright).md
 
 ----- developer disclaimer ------ read below, but not use
 

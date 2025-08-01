@@ -1,0 +1,20 @@
+{
+  "activities": {
+    "WEEKLY": "Weekly Update Tech Team",
+    "RETRO": "Sprint Retrospective",
+    "PLANNING": "Sprint Planning",
+    "REVIEW": "Sprint Review",
+    "DEPLOY": "Recheck feature before deploy to production",
+    "DAILY_STANDUP": "Daily Standup",
+    "LUNCH_BREAK": "พักเที่ยง"
+  },
+  "schedule": {
+    "WEEKLY": { "day": 2, "frequency": "every", "hours": 1 },
+    "PLANNING": { "day": 1, "frequency": "alternate", "hours": 1 },
+    "DEPLOY": { "day": 4, "frequency": "every", "hours": 0.5 },
+    "RETRO": { "day": 5, "frequency": "alternate", "hours": 1 },
+    "REVIEW": { "day": 5, "frequency": "alternate", "hours": 1 },
+    "DAILY_STANDUP": { "day": "workdays", "frequency": "every", "hours": 1 },
+    "LUNCH_BREAK": { "day": "workdays", "frequency": "every", "hours": 1 }
+  }
+}

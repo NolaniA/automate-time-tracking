@@ -1,68 +1,7 @@
 #!/bin/bash
 
-# ********❌  Note (อ่านก่อนเหยดแหม่) ❌ ******** #
-
-#  ✅  ต้องมี file ชื่อ config.csv และ daily_tasks.json
-#  ✅  ตรวจเช็ค  START_DAY , END_DAY ,START_MONTH ,START_YEAR, EMPLOYEE_NAME, PROJECT_NAME และ COMPANY 
-# แก้ไข value ใน config.csv ให้ตรงกับของตัวเอง ✅
-# สร้างไฟล์ daily_tasks.json สำหรับกำหนด task เฉพาะวัน ✅
-
-# 🚀  วิธี run (cd ไปที่ path ของไฟล์นี้ก่อน --> cd /your-drive/automate-time-tracking/ )
-# 1.  เปิด terminal แล้ว run คำสั่ง chmod +x timesheet.sh กด Enter
-# 2.  run คำสั่ง ./timesheet.sh 
-# 3.  อ่าน terminal แล้วทำตาม
-# 4.  เชค รูปแบบวันที่ ใน .json ต้องเป็น "YYYY-MM-DD" เช่น "2025-07-01"
-
-
-# -------------------- ตัวอย่าง config.csv ------------------------- #
-#    key,value
-#    START_DAY,29
-#    END_DAY,31
-#    START_MONTH,7
-#    START_YEAR,2025
-#    EMPLOYEE_NAME,โด้-พัฒนพล
-#    PROJECT_NAME,futureskill-b2b-learning-platform25
-
-
-# -------------------- ตัวอย่าง daily_tasks.json ------------------------- #
-# {
-#   "2025-07-29": [
-#     {
-#       "task": "Fix authentication bug in login module",
-#       "type": "work",
-#       "hours": "2"
-#     },
-#     {
-#       "task": "Code review for pull request #123",
-#       "type": "audit",
-#       "hours": "1"
-#     }
-#   ],
-#   "2025-07-30": [
-#     {
-#       "task": "Research new React optimization techniques",
-#       "type": "plan",
-#       "hours": "3"
-#     }
-#   ],
-#   "default": [
-#     {
-#       "task": "Development class management II",
-#       "type": "work", 
-#       "hours": "2"
-#     }
-#   ]
-# }
-#
-# Task Types ที่รองรับ:
-# - "work" = Create / Do / Work
-# - "audit" = Audit Work  
-# - "plan" = Plan / Think
-# - "coordinate" = Co-Ordinate
-# - "meeting" = Internal Meeting
-# - "idle" = Idle
-# - "leave" = Leave
-# ---------------------------------------------- #
+# 🤖 Automated Timesheet Submission Tool
+# สำหรับรายละเอียดและวิธีใช้งาน กรุณาอ่าน README(for playwright).md
 
 # หา directory ที่ไฟล์นี้อยู่
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -83,7 +22,8 @@ echo "✅ พบ npm เวอร์ชัน: $(npm -v)"
 
 # 2. สร้าง package.json ถ้ายังไม่มี
 if [ ! -f package.json ]; then
-  npm init -y
+  echo "📦 กำลังสร้าง package.json..."
+  npm init -y > /dev/null
   echo "✅ สร้าง package.json เรียบร้อย"
 fi
 
@@ -95,25 +35,57 @@ else
 fi
 
 # 4. ตรวจสอบและติดตั้ง playwright
+echo "🔍 กำลังตรวจสอบ playwright..."
 npm list playwright &> /dev/null
 if [ $? -ne 0 ]; then
-  echo "🔄 กำลังติดตั้ง playwright ..."
-  npm install playwright
+  echo "🔄 กำลังติดตั้ง playwright..."
+  echo "⏳ อาจใช้เวลาสักครู่ กรุณารอ..."
+  
+  # ลองติดตั้ง playwright
+  npm install playwright --no-optional --verbose
+  
+  # ตรวจสอบว่าติดตั้งสำเร็จหรือไม่
+  if npm list playwright &> /dev/null; then
+    echo "✅ ติดตั้ง playwright เรียบร้อย"
+  else
+    echo "❌ ติดตั้ง playwright ไม่สำเร็จ"
+    echo "🔧 กำลังลองวิธีอื่น..."
+    
+    # ลองติดตั้งแบบไม่มี flags
+    npm install playwright
+    
+    if npm list playwright &> /dev/null; then
+      echo "✅ ติดตั้ง playwright สำเร็จ (ครั้งที่ 2)"
+    else
+      echo "❌ ไม่สามารถติดตั้ง playwright ได้"
+      echo "📋 กรุณาลองติดตั้งด้วยตนเอง:"
+      echo "   npm install playwright"
+      exit 1
+    fi
+  fi
 else
   echo "✅ พบแพ็กเกจ playwright แล้ว"
 fi
 
 # 5. ตรวจสอบและติดตั้ง date-fns
+echo "🔍 กำลังตรวจสอบ date-fns..."
 npm list date-fns &> /dev/null
 if [ $? -ne 0 ]; then
-  echo "🔄 กำลังติดตั้ง date-fns ..."
+  echo "🔄 กำลังติดตั้ง date-fns..."
   npm install date-fns
+  if npm list date-fns &> /dev/null; then
+    echo "✅ ติดตั้ง date-fns เรียบร้อย"
+  else
+    echo "❌ ติดตั้ง date-fns ไม่สำเร็จ"
+    exit 1
+  fi
 else
   echo "✅ พบแพ็กเกจ date-fns แล้ว"
 fi
 
 CONFIG_FILE="config.csv"
 DAILY_TASKS_FILE="daily_tasks.json"
+SCHEDULED_ACTIVITIES_FILE="scheduled_activities.json"
 SCRIPT_FILE="airtable_submit.mjs"
 
 # 6. ตรวจสอบว่าไฟล์ config.csv มีอยู่ไหม
@@ -124,14 +96,44 @@ fi
 
 echo "📄 Found config: $CONFIG_FILE"
 
-# 7. สร้างไฟล์ daily_tasks.json ตัวอย่างถ้ายังไม่มี
+# 7. สร้างไฟล์ scheduled_activities.json ตัวอย่างถ้ายังไม่มี
+if [[ ! -f $SCHEDULED_ACTIVITIES_FILE ]]; then
+  echo "📄 Creating sample $SCHEDULED_ACTIVITIES_FILE..."
+  cat << 'EOF' > "$SCHEDULED_ACTIVITIES_FILE"
+{
+  "activities": {
+    "WEEKLY": "Weekly Update Tech Team",
+    "RETRO": "Sprint Retrospective", 
+    "PLANNING": "Sprint Planning",
+    "REVIEW": "Sprint Review",
+    "DEPLOY": "Recheck feature before deploy to production",
+    "DAILY_STANDUP": "Daily Standup",
+    "LUNCH_BREAK": "พักเที่ยง"
+  },
+  "schedule": {
+    "WEEKLY": { "day": 2, "frequency": "every", "hours": 1 },
+    "PLANNING": { "day": 1, "frequency": "alternate", "hours": 1 },
+    "DEPLOY": { "day": 4, "frequency": "every", "hours": 0.5 },
+    "RETRO": { "day": 5, "frequency": "alternate", "hours": 1 },
+    "REVIEW": { "day": 5, "frequency": "alternate", "hours": 1 },
+    "DAILY_STANDUP": { "day": "workdays", "frequency": "every", "hours": 1 },
+    "LUNCH_BREAK": { "day": "workdays", "frequency": "every", "hours": 1 }
+  }
+}
+EOF
+  echo "✅ Created sample $SCHEDULED_ACTIVITIES_FILE"
+  echo "📋 day: 1=จันทร์ 2=อังคาร 3=พุธ 4=พฤหัส 5=ศุกร์ หรือ \"workdays\""
+  echo "📋 frequency: \"every\"=ทุกสัปดาห์ หรือ \"alternate\"=เว้นสัปดาห์"
+fi
+
+# 8. สร้างไฟล์ daily_tasks.json ตัวอย่างถ้ายังไม่มี
 if [[ ! -f $DAILY_TASKS_FILE ]]; then
   echo "📄 Creating sample $DAILY_TASKS_FILE..."
   cat << 'EOF' > "$DAILY_TASKS_FILE"
 {
-  "default": [
+  "2025-07-29": [
     {
-      "task": "Development class management II",
+      "task": "Fix authentication bug in login module",
       "type": "work",
       "hours": "2"
     }
@@ -140,9 +142,10 @@ if [[ ! -f $DAILY_TASKS_FILE ]]; then
 EOF
   echo "✅ Created sample $DAILY_TASKS_FILE - Please customize it for your needs"
   echo "📋 Available task types: work, audit, plan, coordinate, meeting, idle, leave"
+  echo "ℹ️  Days without daily_tasks will only have scheduled activities"
 fi
 
-# 8. สร้าง airtable_submit.mjs โดยฝังโค้ด JavaScript ที่จะอ่าน config.csv และ daily_tasks.json
+# 9. สร้าง airtable_submit.mjs โดยฝังโค้ด JavaScript ที่จะอ่าน config.csv และ JSON files
 cat << 'EOF' > "$SCRIPT_FILE"
 import { readFileSync } from 'fs';
 import { chromium } from 'playwright';
@@ -156,6 +159,17 @@ for (const line of configLines) {
   const [key, ...rest] = line.split(',');
   const value = rest.join(',').trim(); // รองรับ value ที่มี , ได้
   if (key && value) config[key.trim()] = value;
+}
+
+// อ่าน scheduled_activities.json
+let scheduledData = {};
+try {
+  const scheduledText = readFileSync('./scheduled_activities.json', 'utf-8');
+  scheduledData = JSON.parse(scheduledText);
+  console.log('✅ Loaded scheduled activities configuration');
+} catch (error) {
+  console.error('❌ Error reading scheduled_activities.json:', error.message);
+  process.exit(1);
 }
 
 // อ่าน daily_tasks.json
@@ -188,15 +202,9 @@ const EMPLOYEE_NAME = config.EMPLOYEE_NAME;
 const PROJECT_NAME = config.PROJECT_NAME;
 const COMPANY = config.COMPANY || "FutureSkill";
 
-const ACTIVITY_TYPE = {
-  WEEKLY: 'Weekly Update Tech Team',
-  RETRO: 'Sprint Retrospective',
-  PLANNING: 'Sprint Planning',
-  REVIEW: 'Sprint Review',
-  DEPLOY: 'Recheck feature before deploy to production',
-  DAILY_STANDUP: 'Daily Standup', 
-  LUNCH_BREAK: "พักเที่ยง"
-};
+// ดึงข้อมูลจาก scheduled_activities.json
+const ACTIVITY_TYPE = scheduledData.activities || {};
+const SCHEDULE = scheduledData.schedule || {};
 
 // Task Type Mapping สำหรับ daily tasks
 const TASK_TYPE_MAPPING = {
@@ -206,17 +214,8 @@ const TASK_TYPE_MAPPING = {
   'coordinate': 'Co-Ordinate',
   'meeting': 'Internal Meeting',
   'idle': 'Idle',
-  'leave': 'Leave'
-};
-
-const SCHEDULE = {
-  WEEKLY: { day: 2, frequency: 'every', hours: 1 },
-  PLANNING: { day: 1, frequency: 'alternate', hours: 1 },
-  DEPLOY: { day: 4, frequency: 'every', hours: 0.5 },
-  RETRO: { day: 5, frequency: 'alternate', hours: 1 },
-  REVIEW: { day: 5, frequency: 'alternate', hours: 1 },
-  DAILY_STANDUP: { day: 'workdays', frequency: 'every', hours: 1 },
-  LUNCH_BREAK: { day: 'workdays', frequency: 'every', hours: 1 }
+  'leave': 'Leave',
+  'other' : 'Other'
 };
 
 const URL = "https://airtable.com/app6PjJAAPwiRw71N/pagWjJnFT2ZQn7eka/form";
@@ -224,20 +223,15 @@ const URL = "https://airtable.com/app6PjJAAPwiRw71N/pagWjJnFT2ZQn7eka/form";
 /**
  * ดึง daily tasks สำหรับวันที่กำหนด
  * @param {string} dateStr - วันที่ในรูปแบบ YYYY-MM-DD
- * @returns {Array} - array ของ daily tasks
+ * @returns {Array} - array ของ daily tasks หรือ empty array ถ้าไม่มี
  */
 function getDailyTasksForDate(dateStr) {
-  // ลองหา task เฉพาะวันก่อน
+  // ถ้ามี task เฉพาะวันนี้ให้ return
   if (dailyTasks[dateStr]) {
     return dailyTasks[dateStr];
   }
   
-  // ถ้าไม่มี ใช้ default
-  if (dailyTasks.default) {
-    return dailyTasks.default;
-  }
-  
-  // ถ้าไม่มี default ให้ return empty array
+  // ถ้าไม่มี ให้ return empty array (ไม่ต้องมี default)
   return [];
 }
 
@@ -324,7 +318,7 @@ function createTaskFromDailyWork(dailyTask) {
   const browser = await chromium.launch({ headless: false });
   const context = await browser.newContext({
     viewport: { width: 1250, height: 600 },
-    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+    userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
   });
   const page = await context.newPage();
   await page.goto(URL, { waitUntil: 'domcontentloaded' });
@@ -371,7 +365,7 @@ function createTaskFromDailyWork(dailyTask) {
       });
 
       workdays.push({
-        date: format(currentDate, 'MM/dd/yyyy'),
+        date: format(currentDate, 'yyyy/MM/dd'),
         dayName: format(currentDate, 'EEEE'),
         tasks: allTasks
       });
@@ -432,13 +426,9 @@ function createTaskFromDailyWork(dailyTask) {
       await dateInput.waitFor({ state: 'visible' });
       await page.keyboard.press('Tab');
       await page.waitForTimeout(1000);
-
       
       // ตรวจสอบว่าวันที่ถูกกรอกแล้ว
       const dateValue = await dateInput.inputValue();
-      const placeholder = await dateInput.getAttribute('placeholder');
-      console.log('📌 Placeholder for date input:', placeholder);
-
       console.log(`Date filled: ${dateValue}`);
 
       // กรอกพนักงาน
@@ -534,7 +524,7 @@ EOF
 
 echo "✅ สร้างไฟล์ $SCRIPT_FILE เรียบร้อย"
 
-# 9. รันสคริปต์
+# 10. รันสคริปต์
 echo "🚀 กำลังรันสคริปต์..."
 node "$SCRIPT_FILE"
 
