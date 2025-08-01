@@ -1,9 +1,8 @@
 key,value
-START_DAY,14
-END_DAY,16
-START_MONTH,7
+START_DAY,1
+END_DAY,1
+START_MONTH,8
 START_YEAR,2025
 EMPLOYEE_NAME,โด้-พัฒนพล
 PROJECT_NAME,futureskill-b2b-learning-platform25
-MORNING_WORK,Bug fixed i18n content-panel repository
-DAILY_WORK,Development Feature
+

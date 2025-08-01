@@ -1,0 +1,21 @@
+{
+  "2025-08-01": [
+    {
+      "task": "Fix authentication bug in context userType ecom",
+      "type": "work",
+      "hours": "2"
+    },
+    {
+      "task": "Code review for pull request",
+      "type": "audit",
+      "hours": "1"
+    }
+  ],
+  "default": [
+    {
+      "task": "Development subscription license course premium",
+      "type": "work",
+      "hours": "2"
+    }
+  ]
+}

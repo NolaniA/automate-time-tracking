@@ -2,17 +2,19 @@
 
 # ********❌  Note (อ่านก่อนเหยดแหม่) ❌ ******** #
 
-#  ✅  ต้องมี file ชื่อ config.csv
+#  ✅  ต้องมี file ชื่อ config.csv และ daily_tasks.json
 #  ✅  ตรวจเช็ค  START_DAY , END_DAY ,START_MONTH ,START_YEAR, EMPLOYEE_NAME, PROJECT_NAME และ COMPANY 
 # แก้ไข value ใน config.csv ให้ตรงกับของตัวเอง ✅
+# สร้างไฟล์ daily_tasks.json สำหรับกำหนด task เฉพาะวัน ✅
 
 # 🚀  วิธี run (cd ไปที่ path ของไฟล์นี้ก่อน --> cd /your-drive/automate-time-tracking/ )
 # 1.  เปิด terminal แล้ว run คำสั่ง chmod +x timesheet.sh กด Enter
 # 2.  run คำสั่ง ./timesheet.sh 
-# 2 . อ่าน terminal แล้วทำตาม
+# 3.  อ่าน terminal แล้วทำตาม
+# 4.  เชค รูปแบบวันที่ ใน .json ต้องเป็น "YYYY-MM-DD" เช่น "2025-07-01"
+
 
 # -------------------- ตัวอย่าง config.csv ------------------------- #
-
 #    key,value
 #    START_DAY,29
 #    END_DAY,31
@@ -20,15 +22,47 @@
 #    START_YEAR,2025
 #    EMPLOYEE_NAME,โด้-พัฒนพล
 #    PROJECT_NAME,futureskill-b2b-learning-platform25
-#    MORNING_WORK,Bug fix i18n content-panel repository
-#    DAILY_WORK,Development class management II
 
 
+# -------------------- ตัวอย่าง daily_tasks.json ------------------------- #
+# {
+#   "2025-07-29": [
+#     {
+#       "task": "Fix authentication bug in login module",
+#       "type": "work",
+#       "hours": "2"
+#     },
+#     {
+#       "task": "Code review for pull request #123",
+#       "type": "audit",
+#       "hours": "1"
+#     }
+#   ],
+#   "2025-07-30": [
+#     {
+#       "task": "Research new React optimization techniques",
+#       "type": "plan",
+#       "hours": "3"
+#     }
+#   ],
+#   "default": [
+#     {
+#       "task": "Development class management II",
+#       "type": "work", 
+#       "hours": "2"
+#     }
+#   ]
+# }
+#
+# Task Types ที่รองรับ:
+# - "work" = Create / Do / Work
+# - "audit" = Audit Work  
+# - "plan" = Plan / Think
+# - "coordinate" = Co-Ordinate
+# - "meeting" = Internal Meeting
+# - "idle" = Idle
+# - "leave" = Leave
 # ---------------------------------------------- #
-
-
-# ********❌  Note (อ่านก่อนเหยดแหม่ ❌ ******** #
-
 
 # หา directory ที่ไฟล์นี้อยู่
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -79,6 +113,7 @@ else
 fi
 
 CONFIG_FILE="config.csv"
+DAILY_TASKS_FILE="daily_tasks.json"
 SCRIPT_FILE="airtable_submit.mjs"
 
 # 6. ตรวจสอบว่าไฟล์ config.csv มีอยู่ไหม
@@ -89,12 +124,31 @@ fi
 
 echo "📄 Found config: $CONFIG_FILE"
 
-# 7. สร้าง airtable_submit.mjs โดยฝังโค้ด JavaScript ที่จะอ่าน config.csv ภายใน
+# 7. สร้างไฟล์ daily_tasks.json ตัวอย่างถ้ายังไม่มี
+if [[ ! -f $DAILY_TASKS_FILE ]]; then
+  echo "📄 Creating sample $DAILY_TASKS_FILE..."
+  cat << 'EOF' > "$DAILY_TASKS_FILE"
+{
+  "default": [
+    {
+      "task": "Development class management II",
+      "type": "work",
+      "hours": "2"
+    }
+  ]
+}
+EOF
+  echo "✅ Created sample $DAILY_TASKS_FILE - Please customize it for your needs"
+  echo "📋 Available task types: work, audit, plan, coordinate, meeting, idle, leave"
+fi
+
+# 8. สร้าง airtable_submit.mjs โดยฝังโค้ด JavaScript ที่จะอ่าน config.csv และ daily_tasks.json
 cat << 'EOF' > "$SCRIPT_FILE"
 import { readFileSync } from 'fs';
 import { chromium } from 'playwright';
 import { format, isWeekend } from 'date-fns';
 
+// อ่าน config.csv
 const configText = readFileSync('./config.csv', 'utf-8');
 const configLines = configText.trim().split('\n').slice(1); // skip header
 const config = {};
@@ -102,6 +156,17 @@ for (const line of configLines) {
   const [key, ...rest] = line.split(',');
   const value = rest.join(',').trim(); // รองรับ value ที่มี , ได้
   if (key && value) config[key.trim()] = value;
+}
+
+// อ่าน daily_tasks.json
+let dailyTasks = {};
+try {
+  const dailyTasksText = readFileSync('./daily_tasks.json', 'utf-8');
+  dailyTasks = JSON.parse(dailyTasksText);
+  console.log('✅ Loaded daily tasks configuration');
+} catch (error) {
+  console.error('❌ Error reading daily_tasks.json:', error.message);
+  process.exit(1);
 }
 
 // ตรวจสอบ config ที่จำเป็น
@@ -121,7 +186,7 @@ const START_YEAR = Number(config.START_YEAR);
 
 const EMPLOYEE_NAME = config.EMPLOYEE_NAME;
 const PROJECT_NAME = config.PROJECT_NAME;
-const COMPANY = "FutureSkill";
+const COMPANY = config.COMPANY || "FutureSkill";
 
 const ACTIVITY_TYPE = {
   WEEKLY: 'Weekly Update Tech Team',
@@ -130,9 +195,18 @@ const ACTIVITY_TYPE = {
   REVIEW: 'Sprint Review',
   DEPLOY: 'Recheck feature before deploy to production',
   DAILY_STANDUP: 'Daily Standup', 
-  MORNING_WORK: config.MORNING_WORK || "ปรึกษากับ ux/ui ส่วนที่ต้องพัฒนาเพิ่มเติมของโปรเจค",
-  LUNCH_BREAK: "พักเที่ยง",
-  DAILY_WORK: config.DAILY_WORK || "อัพเดตความคืบหน้าของงานและระยะเวลาดำเนินงาน"
+  LUNCH_BREAK: "พักเที่ยง"
+};
+
+// Task Type Mapping สำหรับ daily tasks
+const TASK_TYPE_MAPPING = {
+  'work': 'Create / Do / Work',
+  'audit': 'Audit Work',
+  'plan': 'Plan / Think', 
+  'coordinate': 'Co-Ordinate',
+  'meeting': 'Internal Meeting',
+  'idle': 'Idle',
+  'leave': 'Leave'
 };
 
 const SCHEDULE = {
@@ -142,21 +216,38 @@ const SCHEDULE = {
   RETRO: { day: 5, frequency: 'alternate', hours: 1 },
   REVIEW: { day: 5, frequency: 'alternate', hours: 1 },
   DAILY_STANDUP: { day: 'workdays', frequency: 'every', hours: 1 },
-  MORNING_WORK: { day: 'workdays', frequency: 'every', hours: 1 },
-  LUNCH_BREAK: { day: 'workdays', frequency: 'every', hours: 1 },
-  DAILY_WORK: { day: 'workdays', frequency: 'every', hours: 1 }
+  LUNCH_BREAK: { day: 'workdays', frequency: 'every', hours: 1 }
 };
 
 const URL = "https://airtable.com/app6PjJAAPwiRw71N/pagWjJnFT2ZQn7eka/form";
 
+/**
+ * ดึง daily tasks สำหรับวันที่กำหนด
+ * @param {string} dateStr - วันที่ในรูปแบบ YYYY-MM-DD
+ * @returns {Array} - array ของ daily tasks
+ */
+function getDailyTasksForDate(dateStr) {
+  // ลองหา task เฉพาะวันก่อน
+  if (dailyTasks[dateStr]) {
+    return dailyTasks[dateStr];
+  }
+  
+  // ถ้าไม่มี ใช้ default
+  if (dailyTasks.default) {
+    return dailyTasks.default;
+  }
+  
+  // ถ้าไม่มี default ให้ return empty array
+  return [];
+}
 
 /**
- * เช็คว่าวันนั้นๆ ต้องมีกิจกรรมอะไรบ้าง
+ * เช็คว่าวันนั้นๆ ต้องมีกิจกรรมอะไรบ้าง (นอกจาก daily tasks)
  * @param {Date} date - วันที่ต้องการเช็ค
  * @param {Date} startDate - วันเริ่มต้นสำหรับคำนวณ alternate
  * @returns {Array} - array ของ activity types
  */
-function getActivitiesForDay(date, startDate) {
+function getScheduledActivitiesForDay(date, startDate) {
   if (isWeekend(date)) {
     return [];
   }
@@ -170,10 +261,7 @@ function getActivitiesForDay(date, startDate) {
 
   // เช็คแต่ละกิจกรรม
   for (const [type, schedule] of Object.entries(SCHEDULE)) {
-    if (schedule.day === 'daily') {
-      // ทุกวัน (รวมวันหยุด แต่เราจะ filter วันหยุดไว้แล้ว)
-      activities.push(type);
-    } else if (schedule.day === 'workdays') {
+    if (schedule.day === 'workdays') {
       // ทุกวันทำงาน
       activities.push(type);
     } else if (dayOfWeek === schedule.day) {
@@ -191,23 +279,17 @@ function getActivitiesForDay(date, startDate) {
 }
 
 /**
- * สร้าง task สำหรับ activity เดียว
+ * สร้าง task สำหรับ scheduled activity
  * @param {string} activity - activity type
  * @returns {Object} - { taskItem, taskNote, taskType, hours }
  */
-function createTaskFromSingleActivity(activity) {
+function createTaskFromActivity(activity) {
   const schedule = SCHEDULE[activity];
   
   let taskType;
   switch (activity) {
     case 'LUNCH_BREAK':
       taskType = 'Idle';
-      break;
-    case 'MORNING_WORK':
-      taskType = 'Create / Do / Work';
-      break;
-    case 'DAILY_WORK':
-      taskType = 'Create / Do / Work';
       break;
     default:
       taskType = 'Internal Meeting';
@@ -221,12 +303,28 @@ function createTaskFromSingleActivity(activity) {
   };
 }
 
+/**
+ * สร้าง task สำหรับ daily work
+ * @param {Object} dailyTask - daily task object
+ * @returns {Object} - { taskItem, taskNote, taskType, hours }
+ */
+function createTaskFromDailyWork(dailyTask) {
+  // แปลง short type เป็น full type name
+  const fullTaskType = TASK_TYPE_MAPPING[dailyTask.type] || 'Create / Do / Work';
+  
+  return {
+    taskType: fullTaskType,
+    taskItem: dailyTask.task,
+    taskNote: dailyTask.task,
+    hours: dailyTask.hours
+  };
+}
+
 (async () => {
   const browser = await chromium.launch({ headless: false });
   const context = await browser.newContext({
     viewport: { width: 1250, height: 600 },
     userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
-    // storageState: './trackingstate.json'
   });
   const page = await context.newPage();
   await page.goto(URL, { waitUntil: 'domcontentloaded' });
@@ -241,45 +339,58 @@ function createTaskFromSingleActivity(activity) {
 
   for (let i = 0; i < totalDays; i++) {
     const currentDate = new Date(START_YEAR, START_MONTH - 1, START_DAY + i);
-    console.log("day", currentDate);
+    const dateStr = format(currentDate, 'yyyy-MM-dd');
+    console.log("Processing day:", dateStr);
     
     if (!isWeekend(currentDate)) {
-      const activities = getActivitiesForDay(currentDate, startDate);
+      // ดึง scheduled activities (meetings, breaks, etc.)
+      const scheduledActivities = getScheduledActivitiesForDay(currentDate, startDate);
       
-      // สร้าง task แยกสำหรับแต่ละ activity
-      const dayTasks = [];
-      if (activities.length === 0) {
-        // ถ้าไม่มี activity ให้ใส่ Development
-        dayTasks.push({
-          activity: 'DEVELOPMENT',
-          ...createTaskFromSingleActivity('DEVELOPMENT')
+      // ดึง daily tasks สำหรับวันนี้
+      const dayTasks = getDailyTasksForDate(dateStr);
+      
+      // สร้าง task array สำหรับวันนี้
+      const allTasks = [];
+      
+      // เพิ่ม scheduled activities
+      scheduledActivities.forEach(activity => {
+        allTasks.push({
+          activity: activity,
+          source: 'scheduled',
+          ...createTaskFromActivity(activity)
         });
-      } else {
-        // แยกแต่ละ activity เป็น task ต่างหาก
-        activities.forEach(activity => {
-          dayTasks.push({
-            activity: activity,
-            ...createTaskFromSingleActivity(activity)
-          });
+      });
+      
+      // เพิ่ม daily tasks
+      dayTasks.forEach((dailyTask, index) => {
+        allTasks.push({
+          activity: `DAILY_WORK_${index + 1}`,
+          source: 'daily',
+          ...createTaskFromDailyWork(dailyTask)
         });
-      }
+      });
 
       workdays.push({
-        date: format(currentDate, 'yyyy/M/dd'),
+        date: format(currentDate, 'MM/dd/yyyy'),
         dayName: format(currentDate, 'EEEE'),
-        tasks: dayTasks
+        tasks: allTasks
       });
     }
   }
 
+  // แสดงตาราง work schedule
   console.log('\n📅 Work Schedule:');
   workdays.forEach(day => {
     console.log(`\n${day.date} (${day.dayName}):`);
     day.tasks.forEach((task, index) => {
-      console.log(`  ${index + 1}. Activity: ${task.activity} | Type: ${task.taskType} | Item: ${task.taskItem} | Hours: ${task.hours}h`);
+      const source = task.source === 'scheduled' ? '📅' : '💻';
+      console.log(`  ${source} ${index + 1}. ${task.activity} | Type: ${task.taskType} | Item: ${task.taskItem} | Hours: ${task.hours}h`);
     });
+    const totalHours = day.tasks.reduce((sum, task) => sum + parseFloat(task.hours), 0);
+    console.log(`  🕐 Total hours: ${totalHours}h`);
   });
 
+  // ส่วนของการกรอกฟอร์มยังเหมือนเดิม
   for (const dayData of workdays) {
     console.log(`\n🗓️ Starting ${dayData.date} (${dayData.dayName}) - ${dayData.tasks.length} tasks`);
     
@@ -321,9 +432,13 @@ function createTaskFromSingleActivity(activity) {
       await dateInput.waitFor({ state: 'visible' });
       await page.keyboard.press('Tab');
       await page.waitForTimeout(1000);
+
       
       // ตรวจสอบว่าวันที่ถูกกรอกแล้ว
       const dateValue = await dateInput.inputValue();
+      const placeholder = await dateInput.getAttribute('placeholder');
+      console.log('📌 Placeholder for date input:', placeholder);
+
       console.log(`Date filled: ${dateValue}`);
 
       // กรอกพนักงาน
@@ -416,29 +531,10 @@ function createTaskFromSingleActivity(activity) {
   await browser.close();
 })();
 EOF
+
 echo "✅ สร้างไฟล์ $SCRIPT_FILE เรียบร้อย"
 
-echo "🛠️ กำลังปรับรูปแบบวันที่ใน airtable_submit.mjs..."
-
-# ตรวจสอบระบบปฏิบัติการ
-OS_TYPE=$(uname)
-
-# คำสั่ง sed ให้แก้ yyyy/M/dd → MM/dd/yyyy
-if [[ "$OS_TYPE" == "Darwin" ]]; then
-  # สำหรับ macOS
-  sed -i '' "s/format(currentDate, 'yyyy\/M\/dd')/format(currentDate, 'MM\/dd\/yyyy')/g" "$SCRIPT_FILE"
-elif [[ "$OS_TYPE" == "Linux" ]]; then
-  # สำหรับ Linux
-  sed -i "s/format(currentDate, 'yyyy\/M\/dd')/format(currentDate, 'MM\/dd\/yyyy')/g" "$SCRIPT_FILE"
-else
-  echo "❌ ไม่รองรับ OS นี้: $OS_TYPE"
-  exit 1
-fi
-
-echo "✅ แก้ไข format วันที่ใน airtable_submit.mjs สำเร็จแล้ว"
-
-
-# 7. รันสคริปต์
+# 9. รันสคริปต์
 echo "🚀 กำลังรันสคริปต์..."
 node "$SCRIPT_FILE"
 
