@@ -1,0 +1,3087 @@
+{
+  "2025-08-01": [
+    {
+      "task": "Bug fix add SALES_X to enum",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-07-31": [
+    {
+      "task": "Bug fix add await and validate data for prevent empty payload",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-07-30": [
+    {
+      "task": "Bug fix redirect purchase",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix event type",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create new context userType",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-07-29": [
+    {
+      "task": "Create husky init",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create new userType license tier",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-07-25": [
+    {
+      "task": "Create update usertype license",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-07-24": [
+    {
+      "task": "Bug fix update permission by providerIds",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create revert type license",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix MFS-3140 info expire",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-07-23": [
+    {
+      "task": "Create context usertype license",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-07-21": [
+    {
+      "task": "Bug fix refactor from fb event -  pr review",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix improve code from review - fb event destination",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create new env for prod. pixelId",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-07-17": [
+    {
+      "task": "Create update 2c2p redirect destination to track fb meta",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix update env dev",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update encrypt properties ssr fb event",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix env dev",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix build conflict",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-07-16": [
+    {
+      "task": "Bug fix update api auth for redirect",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix log event err",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update track event",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create update track Purchase",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-07-15": [
+    {
+      "task": "Create update url",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create update redirect purchase url",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create update ssr params",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-07-14": [
+    {
+      "task": "Create update env",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix env workspaceId",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix workspaceId uat point to dev",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create add convert customfield string to json & ssr purchase",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-07-11": [
+    {
+      "task": "Create new api assessment-provider",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create backup source code",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-07-09": [
+    {
+      "task": "Create ui defect",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix hidden null detail",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-07-08": [
+    {
+      "task": "Bug fix null and error detail client occur",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix defect ui",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-07-04": [
+    {
+      "task": "Bug fix default detail if null",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-07-03": [
+    {
+      "task": "Create add query push to navigation newtab (support aff id)",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix add aff cookie if open newTab url",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix ssr cookie update at homepage",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-07-02": [
+    {
+      "task": "Bug fix date-time active package",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix add cartNo",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove unuse event tracking",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix check undefined product",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update condition filter",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-07-01": [
+    {
+      "task": "Create new event initiate checkout",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create update url expire tag",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix remove init",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-06-27": [
+    {
+      "task": "Bug fix provider filter detail page",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix test event on desktop",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix realtime set aff cookie from ssr query",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update tag",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-06-26": [
+    {
+      "task": "Bug fix update tag",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix change tag event position",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix setInterval addCart",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create test cod non-redirect line window",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix btn search unclick - err.msg delay",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-06-25": [
+    {
+      "task": "Bug fix update fb event",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-06-24": [
+    {
+      "task": "Bug fix error alert msg & form helper",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix defect ui - search - pagination",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix role permission edit provider - err msg unique code",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-06-23": [
+    {
+      "task": "Bug fix search lowercase",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix prevent call liff outside line-crm path",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix allow realtime update api",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-06-22": [
+    {
+      "task": "Bug fix form and validation feature subscription package & provider",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-06-20": [
+    {
+      "task": "Create update pnpm lock",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix reword",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix merge conflict",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix expire card",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-06-19": [
+    {
+      "task": "Bug fix remove unuse code",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-06-17": [
+    {
+      "task": "Create update api logic - checkbox course premium",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-06-16": [
+    {
+      "task": "Bug fix add courses.workspaceId",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix table relation courses.workspaceId",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix add handler check null",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create new api subscription for get course premium",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-06-13": [
+    {
+      "task": "Create new api subscription for get course premium",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix unsent package",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-06-12": [
+    {
+      "task": "Bug fix env",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-06-11": [
+    {
+      "task": "Create add progress to get course progress",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix update role permission",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create duration time out",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create test open liff tracking event",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create test add cart Event",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create update expire condition",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create update content box",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create merge main - redeem arrange",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-06-09": [
+    {
+      "task": "Create alert condition & new ui product",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-06-08": [
+    {
+      "task": "Create alert condition & new ui product",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-06-06": [
+    {
+      "task": "Create new lib quill for text editor subscription",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-06-05": [
+    {
+      "task": "Create add new api courses/public-progress",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create new api courses/public-progress",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create add relation to query contentType for filter",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-06-04": [
+    {
+      "task": "Bug fix update role permission",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix date modified",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update select date - fix error provider",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix big fix form create subscription product",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-06-02": [
+    {
+      "task": "Create update redeem popup",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create MFS-3252 init",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix update redeem package",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update api new license",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-05-30": [
+    {
+      "task": "Create update util",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-05-29": [
+    {
+      "task": "Bug fix duplicate code prevent",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update destroy module",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update api- text -payload",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-05-28": [
+    {
+      "task": "Bug fix bug fix undefined env key client side",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix build conflict",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix revise interface product with type",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove log",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-05-27": [
+    {
+      "task": "Create recheck products subscription all menu",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix refactor code",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove unuse code",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update form submit key to env",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-05-26": [
+    {
+      "task": "Create new api search-suggestion",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix remove unuse code",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-05-23": [
+    {
+      "task": "Create update maintenance",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix update limit",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix search,set limit",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-05-22": [
+    {
+      "task": "Bug fix improve ux mobile",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix pagination - delete lp",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-05-21": [
+    {
+      "task": "Bug fix search - delete lp api by licenseId",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix build conflict",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-05-15": [
+    {
+      "task": "Bug fix add try catch for get ssr dynamic route",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove dotenv,compose-plugin from next.config",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix pnpm lock",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-04-30": [
+    {
+      "task": "Bug fix update page condition",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update trim params in page",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update trim params condition",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix handle explore parameters",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-04-29": [
+    {
+      "task": "Bug fix implement path condition",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix including path check in middleware",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update matchMaintenanceModeCondition",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix middleware domain",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix middleware - log",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-04-28": [
+    {
+      "task": "Bug fix update next@12.3.5 - middleware.ts structure",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update condition middleware",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix change name middleware",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create new maintenance check from  _middleware.ts",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-04-24": [
+    {
+      "task": "Bug fix adjust property from review advise",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix refresh path",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update path redirect",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-04-23": [
+    {
+      "task": "Bug fix component mount undefind link href",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update route refresh",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create redirect path maintenance",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix undefind courseTypeOption",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix submit form internal path encrypt",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove unuse code",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix unoptimize & edit camelCase variable",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-04-22": [
+    {
+      "task": "Bug fix courseType setting",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix set courseType condition for fsProvider",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update tag element",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix updata tag element",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove auto number",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update depedencies",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix path check",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update condition",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update prose extract style on massage from api",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-04-21": [
+    {
+      "task": "Create maintenance setting redirect route",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix redirect Path to maintenace page",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update condition for split paragraph line in detail prod",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-04-18": [
+    {
+      "task": "Bug fix pnpm lock",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-04-17": [
+    {
+      "task": "Bug fix reversion of linkpay validate discount",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-04-16": [
+    {
+      "task": "Bug fix unoptimize & edit camelCase variable",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update mobile auth menu",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix open target",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update menu navbar & fix lint warning",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-04-11": [
+    {
+      "task": "Bug fix ssr internal path",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-04-10": [
+    {
+      "task": "Bug fix on confirm clear filter",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix ssr internal path",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix clear filter after close add course modal in lp",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-04-08": [
+    {
+      "task": "Bug fix merge conflict",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove question - answer cloudfare err",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-04-04": [
+    {
+      "task": "Bug fix update lock",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix reversion of linkpay validate discount",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update price color",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix build conflict",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update permission tab org",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-04-03": [
+    {
+      "task": "Bug fix update condition mapping segment",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update condition",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update value segment without code",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove code from segment",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix build conflict",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update license detail modal",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-04-02": [
+    {
+      "task": "Bug fix update b2b access type",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update responsive ui",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update condition",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove unused code & comment",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update validate discount",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-04-01": [
+    {
+      "task": "Bug fix detect user ownner from owner id",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix undefined owner",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-03-31": [
+    {
+      "task": "Bug fix reset field if campaign ownner deleted user",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create refactor - new ecommerce",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create add new marketType",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-03-26": [
+    {
+      "task": "Bug fix update force preTest condition in watch section page",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update data license",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-03-25": [
+    {
+      "task": "Bug fix update redirect register",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update justify text subtitle",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix wrap text update active course modal",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-03-24": [
+    {
+      "task": "Bug fix modal popup",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix align icon tab",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove log - add ternary op",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix undefined segment handle",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update code",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix prevent over amount discount code",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update internal path",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-03-21": [
+    {
+      "task": "Bug fix update password validation",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove log",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-03-20": [
+    {
+      "task": "Bug fix space gap detect",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update api in-active course",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create refactor condition",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix add user prefix",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix build conflict",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update cate limit card course",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-03-19": [
+    {
+      "task": "Create categories course card",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix position tag",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix detect block to hidden",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update user type",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove log",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-03-18": [
+    {
+      "task": "Bug fix add page query limit",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix limit learning-path",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update license lp - auto include subcate selected",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix adjust enum temporarily disable",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create api check & add status enum type ECourseActive",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix error href",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix undefind data",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-03-17": [
+    {
+      "task": "Bug fix auto select cate when all subCate checked",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix select & unselect subcate",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create new provider tag - fix category badge status",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create new provider tag",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-03-16": [
+    {
+      "task": "Bug fix update api categories & subCate",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-03-14": [
+    {
+      "task": "Bug fix update search pagination",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix revise error en to th",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update disable",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update permission role condition",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-03-13": [
+    {
+      "task": "Bug fix reset pagination",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix categorie with auto multi selected subCate",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix type",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix ref campaign data",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-03-12": [
+    {
+      "task": "Bug fix qr-code prod url",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove duplicate context",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove depedency",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create add vconsole lib",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix console log",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create add landscape responsive check &  env prod line-liff",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-03-11": [
+    {
+      "task": "Bug fix search with pagination",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update type form",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-03-10": [
+    {
+      "task": "Bug fix refactor line-liff type",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-03-06": [
+    {
+      "task": "Bug fix search - tooltip - pagination",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-03-05": [
+    {
+      "task": "Create inActive course display",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-03-04": [
+    {
+      "task": "Bug fix build lock",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix fetch course user profile",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create add sso providerName from isAuthenticationProvider[]",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix auto register with sync line account",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-03-03": [
+    {
+      "task": "Bug fix update auto sync line register",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update loading state & register case",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update autologin & fetch data user after update",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix check internal liff",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update liff user after register",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update token after timeout",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create realtime update content",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix visible content",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update visible content",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update user after login",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix refactor - auto login",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-02-28": [
+    {
+      "task": "Bug fix verify result redirect",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix redirect duplicate case",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove fetch userType",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create non-auto capitalize email",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix update user type",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix submit typeform in line app",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix liff context",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix clear token after cookie timeout",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix unfetch lineToken",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix refetch type after login",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create add line auto register login",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix redirect after login success",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix add hook autoLogin",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix access denied",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix fetch userType after plan change , auto login",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix font size redesign",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update line mapping register with regex form",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-02-27": [
+    {
+      "task": "Bug fix path library",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix force open line after reset password",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix path rest password destination",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix query forgot password refer",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix text leading",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix event & redirect from email",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix refetch pending depedencies",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix combine component reset with line",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix reset password submit",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-02-26": [
+    {
+      "task": "Bug fix form submit error",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix submit redirect after reset",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix revise bg",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix service forgot password",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix internal redirect",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix get phone reset password",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update url forgot",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix tokn fetch liff",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix token redirect fail",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update login with new-window",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix redirect typeform",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix init notfound line auth",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix build config",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix redirect to line login after submit typeform",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-02-25": [
+    {
+      "task": "Bug fix state register",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix bug defect ui",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-02-24": [
+    {
+      "task": "Bug fix swiper - explore card tag",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove log - swiper pagination",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix forgot password redirect",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix b2b redirect",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix button forgetpassword step",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix add remove b2b cookie firstpage",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update redirect type - reset password",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix revise path status",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix button clickable",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix add cart without redirect page",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create scroll to top when auth submit",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix undefined data",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-02-21": [
+    {
+      "task": "Bug fix add source redirect liff typeform",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create add succes alert after submit forgot pw",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix clear cookie access",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix add clear cookie business + deeplink force line app",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-02-20": [
+    {
+      "task": "Bug fix button text verify invisible",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix else condition register error massage",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove warning loading",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix build conflict",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix liff token undefined",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix handle 400 line auth",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-02-19": [
+    {
+      "task": "Bug fix bypass aff cookie ssr",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove layout in route",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix darkmode yrTag , liff context",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix add aff url params",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix handle error 400 response",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create add vconsole",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create add detect screen access",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix handle api axios error status",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update qr for uat",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix invalid token",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update liff auth",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create new api line liff annoucement",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-02-18": [
+    {
+      "task": "Bug fix add prevent redirect - adjust even tracking",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update env - liff uat , prevent refreshToken redirect",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix next config",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix prevent auth redirect to default login page",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-02-17": [
+    {
+      "task": "Bug fix margin gap all page",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix user profile append",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix cookie not set on temp banner",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix add check path for appply liff context",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix build conflict",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix env build",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix env liff dev",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create new feature liff -auth",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-02-14": [
+    {
+      "task": "Bug fix category lp - add title sign",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create new api line liff annoucement",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-02-13": [
+    {
+      "task": "Bug fix filter - subcate",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-02-10": [
+    {
+      "task": "Bug fix status converting",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update padding",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix add gap spacing",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix spacing gap",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix search from query path",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix ad hidden",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix z-index",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix build conflict",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update api filter",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix bug fix in filter -search",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-02-07": [
+    {
+      "task": "Bug fix build conflict type",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix build conflict",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix pnpm lock",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update condition redirect with accessToken",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix cert redirect",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-02-06": [
+    {
+      "task": "Bug fix build conflict",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix hidden card",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update payload api",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix course undefined",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix text wrap",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update api payload",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-02-05": [
+    {
+      "task": "Bug fix tag hidden desktop mode",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix color border menu yearly",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix padding prevent clickable",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update padding bottom",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update padding spacing",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix downgrade loadash",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update ui navbar",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update login navbar",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update padding",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix new ui navbar mobile - fontsize",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix slide stats spacing",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create font size",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create update filter categories",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-02-04": [
+    {
+      "task": "Bug fix remove border menu item",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update build",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix lock",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update pnpm lock",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update pnpm",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create update api build",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix update course limit",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-02-03": [
+    {
+      "task": "Bug fix handler non-href button",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix decrese spacing from update ui",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix refactor motto slide",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix spacing ,banner clickable",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix navbar mobile login new ui",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix bottom padding",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix cta log-in",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-01-31": [
+    {
+      "task": "Create update footer",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix button mottoslide alignment",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-01-29": [
+    {
+      "task": "Bug fix hidden responsive",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update cart items",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix property undefined",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix build error",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-01-27": [
+    {
+      "task": "Bug fix redirect pretest",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-01-23": [
+    {
+      "task": "Bug fix responsive banner - external path check",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update banner",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix button text error , unclick cart , remove empty query",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-01-22": [
+    {
+      "task": "Bug fix discount platform channel , button text disappear,link",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-01-20": [
+    {
+      "task": "Bug fix refactor from review",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix undefined non-user bn",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-01-17": [
+    {
+      "task": "Create update interface",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-01-16": [
+    {
+      "task": "Create check duplicate course in learning path",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix refactor and remove unused code",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-01-14": [
+    {
+      "task": "Create remove unuse log",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create update modal license",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-01-10": [
+    {
+      "task": "Create add check path from license",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix remove download from feature",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix license learningPath",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update filter license",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-01-09": [
+    {
+      "task": "Create set limit date",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-01-08": [
+    {
+      "task": "Bug fix show license all",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update check currentUrl",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix build conflict",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix filter license in modal pop-up",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix add padding",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix add currentUrl call back",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update api for filter license lp",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create add show campaign on learning-path",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-01-07": [
+    {
+      "task": "Bug fix update tag lp",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update badge with token access fetching",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update api mutate bdage status condition",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-01-06": [
+    {
+      "task": "Bug fix add code license series",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update sorting",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2025-01-03": [
+    {
+      "task": "Bug fix refresh realtime",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix realtime refresh",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix realtime update badge",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2025-01-02": [
+    {
+      "task": "Bug fix build conflict",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create merge features my-library redeem license learning-path",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2024-12-26": [
+    {
+      "task": "Create update api filter params",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2024-12-24": [
+    {
+      "task": "Create add noti badge",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create update design search - filter",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2024-12-23": [
+    {
+      "task": "Bug fix update api include lp",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix undefind lp",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update modal detail",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create add search-suggesstion",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2024-12-20": [
+    {
+      "task": "Bug fix add modal data",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update redirect modal",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix refresh userType",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix redirect path unclickable",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix api data layer",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2024-12-19": [
+    {
+      "task": "Bug fix empty learning path",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix modal popup response",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix refresh token",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix chain operator landing page",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update padding bottom upsell",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix updatae z-index",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update redeem popup",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix type license render",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update height menu setting",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix less padding menu bar",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix build conflict",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2024-12-18": [
+    {
+      "task": "Bug fix check access library",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix redemption text",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix redemption wording ,noti library",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update limit menu",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2024-12-17": [
+    {
+      "task": "Bug fix update link line-oa",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update find license",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix add search ux result",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create add search ux result",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2024-12-16": [
+    {
+      "task": "Bug fix context loading data",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix policy space gap footer",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix dark theme search",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix order footer - navbar -responsive",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix order policy footer",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix responsive",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix internal link",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix link href err",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create footer navigation group",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix conflict build",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix navbar burger switch position side from check accessTok",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2024-12-13": [
+    {
+      "task": "Bug fix responsive log-in",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update hidden navbar-burger",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix yearly badge",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create new i navbar & footer",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create new ui navbar -footer",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create new footer",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2024-12-12": [
+    {
+      "task": "Create update credential & ssr learning-path",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2024-12-06": [
+    {
+      "task": "Create update redeem popup",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix update modal condition",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix responsive modal",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2024-12-04": [
+    {
+      "task": "Bug fix add spinning on v4 payment checkout",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update course route",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix add optional for prevent error , add condition lp path",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update redirect referrer",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update condition redirect",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2024-12-03": [
+    {
+      "task": "Bug fix add utils for handle redirect external path",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix add spinning on v4 payment checkout",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix loading linkpay",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2024-12-02": [
+    {
+      "task": "Bug fix redirect from pretest",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix redirect navbar",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix redirect course,learning-path",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix watch course redirect",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix use window history for redirect",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix redirect with referrer",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix revert condition",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2024-11-29": [
+    {
+      "task": "Bug fix redirect lp",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2024-11-28": [
+    {
+      "task": "Bug fix responsive redeem",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix user type padding - adjust detail user button type",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix price responsive",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2024-11-27": [
+    {
+      "task": "Create refactor style button",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix large font size impact oversize table row",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update style price learning-path",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create update ui",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix show more course up-sell modal",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix hidden discount inactive promotion",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update discount",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2024-11-26": [
+    {
+      "task": "Create update cookies popup expired",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create update api + lp cartItems",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create update learning-path cart items",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2024-11-25": [
+    {
+      "task": "Create add popup modal lp",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix detect max-width responsive",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix ipad responsive testimonial,up sell slide banner",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix discount up-sell fetching from click",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2024-11-22": [
+    {
+      "task": "Bug fix new design my library learning path",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix select package home login",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix undefined package map discount campaign",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2024-11-21": [
+    {
+      "task": "Bug fix event tracking undefined",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix remove unused code",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create update interface",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create update transition banner",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2024-11-20": [
+    {
+      "task": "Create minimize up-sell banner",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create up sale management",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2024-11-19": [
+    {
+      "task": "Create update api validate product offer",
+      "type": "work",
+      "hours": "1"
+    }
+  ],
+  "2024-11-18": [
+    {
+      "task": "Bug fix landing seo url return undefinde",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix update property event tracking",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2024-11-14": [
+    {
+      "task": "Bug fix image issue on tab panel",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix image error",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create resize banner",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create add mobile banner",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix responsive & url eventTracking",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2024-11-13": [
+    {
+      "task": "Create add scroll to top button",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create add external option for url",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix responsive ,text wrap",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2024-11-12": [
+    {
+      "task": "Create add new error duplicate subscription",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Bug fix payment hook callBack",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix passHref & card target url",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Bug fix banner position",
+      "type": "fix",
+      "hours": "2"
+    }
+  ],
+  "2024-11-11": [
+    {
+      "task": "Bug fix config attributes",
+      "type": "fix",
+      "hours": "2"
+    },
+    {
+      "task": "Create add bg tag color",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create revise path",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create bg color",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create add bg custom",
+      "type": "work",
+      "hours": "1"
+    },
+    {
+      "task": "Create new landing section",
+      "type": "work",
+      "hours": "1"
+    }
+  ]
+}
