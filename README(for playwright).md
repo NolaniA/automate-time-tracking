@@ -207,13 +207,6 @@ npm install date-fns --save
 npx playwright install
 ```
 
-### **ปัญหา UTF-8 บน Windows:**
-
-```cmd
-# เปิด Command Prompt แล้วรัน
-chcp 65001
-```
-
 ## 🎯 Features
 
 ### ✅ **Smart Scheduling System**
