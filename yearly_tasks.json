@@ -1,0 +1,403 @@
+{
+  "2025-01-31": [
+    {
+      "task": "Daily Standup",
+      "type": "meeting",
+      "hours": "20"
+    },
+    {
+      "task": "Develop - Improvement B2C platform Login + Register E-commerce & user account",
+      "type": "work",
+      "hours": "40"
+    },
+    {
+      "task": "พักเที่ยง",
+      "type": "idle",
+      "hours": "20"
+    },
+    {
+      "task": "Company Announcement",
+      "type": "meeting",
+      "hours": "1"
+    },
+    {
+      "task": "FS All hands meeting",
+      "type": "meeting",
+      "hours": "2"
+    },
+    {
+      "task": "Weekly meeting Tech Team",
+      "type": "meeting",
+      "hours": "4"
+    },
+    {
+      "task": "Deploy B2C Platform feature to Production",
+      "type": "work",
+      "hours": "3"
+    },
+    {
+      "task": "Bug fix defect ui - Feature on test staging",
+      "type": "work",
+      "hours": "40"
+    },
+    {
+      "task": "Weekly Recheck Deploy Production",
+      "type": "meeting",
+      "hours": "4"
+    },
+    {
+      "task": "Support Test on staging B2C feature",
+      "type": "audit",
+      "hours": "26"
+    }
+  ],
+  "2025-02-28": [
+    {
+      "task": "Daily Standup",
+      "type": "meeting",
+      "hours": "20"
+    },
+    {
+      "task": "Develop new feature realtime Campaign Tax discount",
+      "type": "work",
+      "hours": "40"
+    },
+    {
+      "task": "พักเที่ยง",
+      "type": "idle",
+      "hours": "20"
+    },
+    {
+      "task": "Company Announcement",
+      "type": "meeting",
+      "hours": "1"
+    },
+    {
+      "task": "FS All hands meeting",
+      "type": "meeting",
+      "hours": "2"
+    },
+    {
+      "task": "Weekly meeting Tech Team",
+      "type": "meeting",
+      "hours": "4"
+    },
+    {
+      "task": "Deploy B2C Platform feature to Production",
+      "type": "work",
+      "hours": "3"
+    },
+    {
+      "task": "Bug fix defect ui - Feature on test staging",
+      "type": "work",
+      "hours": "40"
+    },
+    {
+      "task": "Weekly Recheck Deploy Production",
+      "type": "meeting",
+      "hours": "4"
+    },
+    {
+      "task": "Support Test on staging B2C feature",
+      "type": "audit",
+      "hours": "26"
+    }
+  ],
+  "2025-03-31": [
+    {
+      "task": "Daily Standup",
+      "type": "meeting",
+      "hours": "20"
+    },
+    {
+      "task": "Develop from update requirements - new feature Line Liff Authentication",
+      "type": "work",
+      "hours": "60"
+    },
+    {
+      "task": "พักเที่ยง",
+      "type": "idle",
+      "hours": "20"
+    },
+    {
+      "task": "Company Announcement",
+      "type": "meeting",
+      "hours": "1"
+    },
+    {
+      "task": "FS All hands meeting",
+      "type": "meeting",
+      "hours": "2"
+    },
+    {
+      "task": "Weekly meeting Tech Team",
+      "type": "meeting",
+      "hours": "4"
+    },
+    {
+      "task": "Deploy B2C Platform feature to Production",
+      "type": "work",
+      "hours": "3"
+    },
+    {
+      "task": "Bug fix defect ui - Feature on test staging (Linkpay,Platform)",
+      "type": "work",
+      "hours": "30"
+    },
+    {
+      "task": "Weekly Recheck Deploy Production",
+      "type": "meeting",
+      "hours": "4"
+    },
+    {
+      "task": "Support Test on staging B2C feature",
+      "type": "audit",
+      "hours": "16"
+    }
+  ],
+  "2025-04-30": [
+    {
+      "task": "Daily Standup",
+      "type": "meeting",
+      "hours": "20"
+    },
+    {
+      "task": "Develop feature maintenance mode by middleware check domain on B2C Platform",
+      "type": "work",
+      "hours": "60"
+    },
+    {
+      "task": "พักเที่ยง",
+      "type": "idle",
+      "hours": "20"
+    },
+    {
+      "task": "Weekly meeting Tech Team",
+      "type": "meeting",
+      "hours": "4"
+    },
+    {
+      "task": "Company Announcement",
+      "type": "meeting",
+      "hours": "1"
+    },
+    {
+      "task": "FS All hands meeting",
+      "type": "meeting",
+      "hours": "2"
+    },
+    {
+      "task": "Deploy Feature B2C on Production",
+      "type": "work",
+      "hours": "3"
+    },
+    {
+      "task": "Support Test New Feature on Staging",
+      "type": "audit",
+      "hours": "10"
+    },
+    {
+      "task": "Bug fix defect Ui on  B2C Platform & Linkpay",
+      "type": "audit",
+      "hours": "40"
+    }
+  ],
+  "2025-05-30": [
+    {
+      "task": "Daily Standup",
+      "type": "meeting",
+      "hours": "20"
+    },
+    {
+      "task": "Funeral Leave (ลาโศกเศร้า)",
+      "type": "leave",
+      "hours": "40"
+    },
+    {
+      "task": "Develop new feature Subscription Package",
+      "type": "work",
+      "hours": "40"
+    },
+    {
+      "task": "พักเที่ยง",
+      "type": "idle",
+      "hours": "20"
+    },
+    {
+      "task": "Weekly meeting Tech Team",
+      "type": "meeting",
+      "hours": "4"
+    },
+    {
+      "task": "Company Announcement",
+      "type": "meeting",
+      "hours": "1"
+    },
+    {
+      "task": "FS All hands meeting",
+      "type": "meeting",
+      "hours": "2"
+    },
+    {
+      "task": "Deploy Feature B2C on Production",
+      "type": "work",
+      "hours": "3"
+    },
+    {
+      "task": "Support Test New Feature on Staging",
+      "type": "audit",
+      "hours": "10"
+    },
+    {
+      "task": "Bug fix defect Ui on  B2C Platform & Linkpay",
+      "type": "audit",
+      "hours": "20"
+    }
+  ],
+  "2025-06-30": [
+    {
+      "task": "Daily Standup",
+      "type": "meeting",
+      "hours": "20"
+    },
+    {
+      "task": "Develop from update requirements - new feature Subscription Premium Package ",
+      "type": "work",
+      "hours": "60"
+    },
+    {
+      "task": "พักเที่ยง",
+      "type": "idle",
+      "hours": "20"
+    },
+    {
+      "task": "Company Announcement",
+      "type": "meeting",
+      "hours": "1"
+    },
+    {
+      "task": "FS All hands meeting",
+      "type": "meeting",
+      "hours": "2"
+    },
+    {
+      "task": "Weekly meeting Tech Team",
+      "type": "meeting",
+      "hours": "4"
+    },
+    {
+      "task": "Deploy B2C Platform feature to Production",
+      "type": "work",
+      "hours": "3"
+    },
+    {
+      "task": "Bug fix defect ui - Feature on test staging (Linkpay,Platform)",
+      "type": "work",
+      "hours": "30"
+    },
+    {
+      "task": "Weekly Recheck Deploy Production",
+      "type": "meeting",
+      "hours": "4"
+    },
+    {
+      "task": "Support B2C Tech Intern (Frontend Developer)",
+      "type": "coordinate",
+      "hours": "16"
+    }
+  ],
+  "2025-07-31": [
+    {
+      "task": "Daily Standup",
+      "type": "meeting",
+      "hours": "20"
+    },
+    {
+      "task": "Develop new feature Facebook Event tracking Purchase & InitiateCheckout",
+      "type": "work",
+      "hours": "20"
+    },
+    {
+      "task": "พักเที่ยง",
+      "type": "idle",
+      "hours": "20"
+    },
+    {
+      "task": "Training & Support Frontend Developer Intern - feature B2B assessment DAAT score",
+      "type": "work",
+      "hours": "30"
+    },
+    {
+      "task": "Weekly meeting Tech Team",
+      "type": "meeting",
+      "hours": "4"
+    },
+    {
+      "task": "Deploy & Support test on Prod. feature Facebook event tracking Purchase & Initiate Checkout",
+      "type": "work",
+      "hours": "6"
+    },
+    {
+      "task": "Develop new feature - B2C subscription Premium Package",
+      "type": "work",
+      "hours": "20"
+    },
+    {
+      "task": "Support Test New Feature on Staging",
+      "type": "audit",
+      "hours": "20"
+    },
+    {
+      "task": "Bug fix defect Ui - Backend Api on new feature B2B & B2C Platform ",
+      "type": "work",
+      "hours": "20"
+    }
+  ],
+  "2025-08-29": [
+    {
+      "task": "Daily Standup",
+      "type": "meeting",
+      "hours": "20"
+    },
+    {
+      "task": "Training & Support Frontend Developer Intern - feature B2B assessment DAAT score",
+      "type": "work",
+      "hours": "20"
+    },
+    {
+      "task": "พักเที่ยง",
+      "type": "idle",
+      "hours": "20"
+    },
+    {
+      "task": "Weekly meeting Tech Team",
+      "type": "meeting",
+      "hours": "4"
+    },
+    {
+      "task": "Deploy Feature B2C on Production",
+      "type": "work",
+      "hours": "6"
+    },
+    {
+      "task": "Develop new feature - B2C subscription Premium Package",
+      "type": "work",
+      "hours": "20"
+    },
+    {
+      "task": "Support Test New Feature on Staging",
+      "type": "audit",
+      "hours": "40"
+    },
+    {
+      "task": "Develop new feature - B2B calendar admin",
+      "type": "work",
+      "hours": "10"
+    },
+    {
+      "task": "Bug fix defect Ui on new feature B2B & B2C Platform ",
+      "type": "audit",
+      "hours": "20"
+    }
+  ]
+}
