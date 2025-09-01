@@ -1,5 +1,7 @@
 tracking
 
+new -> Yearly track อ่านวิธีใช้งานใน yearly_track.sh
+
 fast run -> อ่านใน README(for playwright).md
 
 ----- developer disclaimer ------ read below, but not use
